@@ -6,6 +6,7 @@ public class ModeloTeste {
 		 
 		 System.out.println("TESTE ALBUM");
 		 System.out.println("TESTE ALBUM");
+		 System.out.println("TESTE ALBUM");
 		 
 	 }
 
