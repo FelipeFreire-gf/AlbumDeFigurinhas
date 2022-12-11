@@ -10,6 +10,7 @@ public class AppAlbum {
 		  Esportivos esportivos = new Esportivos();
 		  Filmes filmes = new Filmes();
 		  Figurinha figurinha = new Figurinha();
+		  Usuario usuarios = new Usuario();
 		  
 		  System.out.println("####################################################");
 		  desenhos.setNomeDoAlbum("Dragon Ball Z - Universe");
@@ -61,10 +62,20 @@ public class AppAlbum {
 		  figurinha.setNumeroFigurinha(10);
 		  figurinha.setQtdRepetidas(2);
 		  figurinha.setValorFigurinha(15);
-		  figurinha.setRelacaoAlbum("Dragon Ball Z - Universe");
+		  figurinha.setRelacaoAlbum("Dragon Ball Z - Universe"+"\n");
 		  
 		  System.out.print(figurinha);
 		 
+// ------------------------------------------------------------------------------------------					  
+		  System.out.println("####################################################");
+		  usuarios.setNomeUser("Enzo");
+		  usuarios.setDataNascimento("01/02/2003");
+		  usuarios.setSexo('M');
+		  usuarios.setEmail("enzo.freefire@bol.com.br");
+		  usuarios.setEndereco("Endereco"+"\n");
+		  
+		  System.out.print(usuarios);		  
+		  
 	 }
 
 }

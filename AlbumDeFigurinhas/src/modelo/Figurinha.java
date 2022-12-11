@@ -4,17 +4,6 @@ public class Figurinha {
 
 	private String nomeFigurinha, raridade, qualidadeFigurinha, relacaoAlbum;
 	private int numeroFigurinha, qtdRepetidas, valorFigurinha;
-	
-	   public void apresentacao() {
-	        System.out.println("Nome figurinha: " + nomeFigurinha);
-	        System.out.println("Raridade: " + raridade);
-	        System.out.println("Qualidade da figurinha: " + qualidadeFigurinha);
-	        System.out.println("Numero da figurinha: " + numeroFigurinha);
-	        System.out.println("Quantidade de repetidas: " + qtdRepetidas);
-	        System.out.println("Valor da figurinha: " + valorFigurinha);
-	        System.out.println("Album relacionado: " + relacaoAlbum);
-	    }
-
 	   
 	public String getRelacaoAlbum() {
 		return relacaoAlbum;

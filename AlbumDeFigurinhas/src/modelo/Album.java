@@ -24,7 +24,7 @@ public abstract class Album {
     //Metodo publico abstrato para listar
     public abstract void listar();
     
-    //Metodo para resumir a apresentacao comum em todas as classes
+    //Metodo para resumir a apresentacao comum em todas as classes que herdam de album
     public void apresentacao() {
         System.out.println("Nome do album: " + nomeDoAlbum);
         System.out.println("Editora " + editora);
