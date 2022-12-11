@@ -6,7 +6,7 @@ public class Figurinha {
 	private int numeroFigurinha, qtdRepetidas, valorFigurinha;
 	
 	   public void apresentacao() {
-	        System.out.println("Nome das figurinha: " + nomeFigurinha);
+	        System.out.println("Nome figurinha: " + nomeFigurinha);
 	        System.out.println("Raridade: " + raridade);
 	        System.out.println("Qualidade da figurinha: " + qualidadeFigurinha);
 	        System.out.println("Numero da figurinha: " + numeroFigurinha);
