@@ -3,7 +3,7 @@ package modelo;
 public class AppAlbum {
 	
 	 public static void main(String[] args) {
-		 
+		 // entradas já cadastradas, implementacao do CRUD no packege view TelaMenu
 		  Desenhos desenhos = new Desenhos();
 		  Esportivos esportivos = new Esportivos();
 		  Filmes filmes = new Filmes();
