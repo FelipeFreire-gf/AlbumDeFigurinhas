@@ -3,8 +3,21 @@ package view;
 import java.util.Scanner;
 import modelo.Desenhos;
 
+
 public class TelaMenu extends Desenhos {
 
+	public static Boolean inicializacao(boolean estado) {
+		
+		if(estado == false) {
+			System.out.println("Sistema inicializado");
+		}else {
+			System.out.println("Sistema finalizado");
+		}
+		
+		return estado;
+	}
+
+	
 	public static String opcaoMenu() {
 		// tentativa menu
 
@@ -71,6 +84,12 @@ public class TelaMenu extends Desenhos {
 			case "8":
 
 				break;	
+				
+			case "9":
+				
+				end = 9;
+				break;	
+			default: System.out.println("Escolha uma opcao!");
 			}
 		} while (end < 9);
 
@@ -78,8 +97,9 @@ public class TelaMenu extends Desenhos {
 
 	public static void main(String[] args) {
 
-		opcaoMenu();
+		inicializacao(false);
 		codigo();
+		inicializacao(true);
 	}
 
 }
