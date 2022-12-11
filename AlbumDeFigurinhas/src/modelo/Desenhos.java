@@ -33,7 +33,7 @@ public class Desenhos extends Album {
 	 @Override
 	    public String toString() {
 	        return "Tipo da animacao: " + tipoAnimacao + "\n" +
-	               "Franquia da Animacao: " + franquiaAnimacao + "\n";
+	               "Franquia da Animacao: " + franquiaAnimacao + "\n" + "\n";
 	    }
     
     

@@ -28,10 +28,10 @@ public abstract class Album {
     public void apresentacao() {
         System.out.println("Nome do album: " + nomeDoAlbum);
         System.out.println("Editora " + editora);
-        System.out.println("País da editora: " + paisEditora);
-        System.out.println("Edição: " + edicao);
-        System.out.println("País de origem: " + paisOrigem);
-        System.out.println("Data de lançamento: " + dataLancamento);
+        System.out.println("Pais da editora: " + paisEditora);
+        System.out.println("Edicao: " + edicao);
+        System.out.println("Pais de origem: " + paisOrigem);
+        System.out.println("Data de lancamento: " + dataLancamento);
     }
 	
 	
