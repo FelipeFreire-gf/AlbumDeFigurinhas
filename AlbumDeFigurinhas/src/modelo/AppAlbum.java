@@ -3,10 +3,13 @@ package modelo;
 public class AppAlbum {
 	
 	 public static void main(String[] args) {
-		 // entradas já cadastradas, implementacao do CRUD no packege view TelaMenu
+		 
+// entradas já cadastradas, implementacao do CRUD no packege view TelaMenu
+		 
 		  Desenhos desenhos = new Desenhos();
 		  Esportivos esportivos = new Esportivos();
 		  Filmes filmes = new Filmes();
+		  Figurinha figurinha = new Figurinha();
 		  
 		  System.out.println("####################################################");
 		  desenhos.setNomeDoAlbum("Dragon Ball Z - Universe");
@@ -50,6 +53,17 @@ public class AppAlbum {
 		  
 		  System.out.print(filmes);
 	  
+// ------------------------------------------------------------------------------------------					  
+		  System.out.println("####################################################");
+		  figurinha.setNomeFigurinha("Majin Boo");
+		  figurinha.setRaridade("Ultra");
+		  figurinha.setQualidadeFigurinha("Nova");
+		  figurinha.setNumeroFigurinha(10);
+		  figurinha.setQtdRepetidas(2);
+		  figurinha.setValorFigurinha(15);
+		  figurinha.setRelacaoAlbum("Dragon Ball Z - Universe");
+		  
+		  System.out.print(figurinha);
 		 
 	 }
 

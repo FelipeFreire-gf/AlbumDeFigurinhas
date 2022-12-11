@@ -36,7 +36,7 @@ public class ControleAlbumEFigurinhas {
 		System.out.println(" 6. Alterar Figurinha       ");
 		System.out.println(" 7. Listar Figurinha        ");
 		System.out.println(" 8. Deletar Figurinha       ");
-		System.out.println(" 9.        SAIR             ");
+		System.out.println(" 10.        SAIR            ");
 		System.out.println("----------------------------");
 		opcao = scan.nextLine();
 		return opcao;
@@ -214,7 +214,7 @@ public class ControleAlbumEFigurinhas {
 				scan.nextLine();
 
 				if (atualizador < i && album[i][1] == "d") {
-
+					// atualizar album desenho
 					System.out.println("Nome Album: ");
 					desenhos.setNomeDoAlbum(scan.nextLine());
 
@@ -253,7 +253,7 @@ public class ControleAlbumEFigurinhas {
 					System.out.println("\n Atualizado com sucesso! \n");
 
 				} else if (atualizador < i && album[i][1] == "e") {
-
+					// atualizar album esporte
 					System.out.println("Nome Album: ");
 					esportivos.setNomeDoAlbum(scan.nextLine());
 
@@ -292,7 +292,7 @@ public class ControleAlbumEFigurinhas {
 					System.out.println("\n Atualizado com sucesso! \n");
 
 				} else if (atualizador < i && album[i][1] == "f") {
-
+					// atualizar album filmes
 					System.out.println("Nome Album: ");
 					filmes.setNomeDoAlbum(scan.nextLine());
 
@@ -337,20 +337,21 @@ public class ControleAlbumEFigurinhas {
 				break;
 
 			case "3":
-				// Listar Album
+				// Listar Albuns
 				System.out.println("LISTAR ALBUNS: ");
-				for (int lista = 0; lista < album.length; lista++) {
-					for (int p3 = 0; p3 < album[p3].length; p3++) {
-						if (album[lista][p3] != null) {
-							if (p3 < 10) {
-								System.out.println("- " + album[lista][p3]);
+				for (int linha = 0; linha < album.length; linha++) {
+					for (int coluna = 0; coluna < album[coluna].length; coluna++) {
+						if (album[linha][coluna] != null) {
+							if (linha < 10) {
+								System.out.println("- " + album[linha][coluna]);
 							}
 						} else {
 							break;
 						}
 					}
 				}
-				System.out.println("----------------------------");
+				System.out.println("----------------------------");	
+				
 				end = 3;
 				break;
 
@@ -410,6 +411,9 @@ public class ControleAlbumEFigurinhas {
 				System.out.println("Valor da figurinha: ");
 				figurinha.setValorFigurinha(scan.nextInt());
 
+				//System.out.println("Album relacionado: ");
+				//figurinha.setRelacaoAlbum(scan.nextLine());
+
 				id = i;
 				carta[i][0] = "Identificador: " + Integer.toString(id);
 				carta[i][1] = "Nome figurinha: " + figurinha.getNomeFigurinha();
@@ -417,7 +421,8 @@ public class ControleAlbumEFigurinhas {
 				carta[i][3] = "Qualidade da figurinha: " + figurinha.getQualidadeFigurinha();
 				carta[i][4] = "Numero da figurinha: " + figurinha.getNumeroFigurinha();
 				carta[i][5] = "Quantidade de repetidas: " + figurinha.getQtdRepetidas();
-				carta[i][6] = "Valor da figurinha:" + figurinha.getValorFigurinha() + "\n";
+				carta[i][6] = "Valor da figurinha: " + figurinha.getValorFigurinha();
+				//carta[i][7] = "Album relacionado: " + figurinha.getRelacaoAlbum() + "\n";
 				i++;
 				end = 5;
 				System.out.println("\n Registrado com sucesso! \n");
@@ -425,7 +430,6 @@ public class ControleAlbumEFigurinhas {
 				break;
 				
 			case "6":
-
 				// Alterar Figurinha:
 				System.out.println("ALTERAR FIGURINHA: ");
 				System.out.println("INFORME O IDENTIFICADOR DA FIGURINHA: ");
@@ -472,11 +476,11 @@ public class ControleAlbumEFigurinhas {
 			case "7":	
 				// Listar Figurinhas
 				System.out.println("LISTAR FIGURINHAS: ");
-				for (int lista = 0; lista < carta.length; lista++) {
-					for (int p3 = 0; p3 < carta[p3].length; p3++) {
-						if (carta[lista][p3] != null) {
-							if (p3 < 9) {
-								System.out.println("- " + carta[lista][p3]);
+				for (int linha = 0; linha < carta.length; linha++) {
+					for (int coluna = 0; coluna < carta[coluna].length; coluna++) {
+						if (carta[linha][coluna] != null) {
+							if (coluna < 7) {
+								System.out.println("- " + carta[linha][coluna]);
 							}
 						} else {
 							break;
@@ -517,14 +521,34 @@ public class ControleAlbumEFigurinhas {
 				break;
 
 			case "9":
-
+				// Colocar figurinha no album	
+				
+				System.out.println("LISTAR ALBUNS: ");
+				for (int linha = 0; linha < album.length; linha++) {
+					for (int coluna = 0; coluna < album[coluna].length; coluna++) {
+						if (album[linha][coluna] != null) {
+							if (linha < 10) {
+								System.out.println("- " + album[linha][coluna]);
+							}
+						} else {
+							break;
+						}
+					}
+				}
+				System.out.println("----------------------------");	
+				
 				end = 9;
+				break;
+			
+			case "10":
+
+				end = 10;
 				break;
 
 			default:
 				System.out.println("Escolha uma opcao!");
 			}
-		} while (end < 9);
+		} while (end < 10);
 
 	}
 /*
